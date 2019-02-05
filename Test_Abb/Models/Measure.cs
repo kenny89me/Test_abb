@@ -9,10 +9,10 @@ namespace Test_Abb.Models
 {
     public abstract class Measure
     {
-        
-        public int Id { get; set; }
+        [Key]
+        public int MeasureId { get; set; }
 
-        public MotorType? MotorType { get; set; }
+        public int MotorId { get; set; }
 
         [Required]
         [DataType(DataType.DateTime)]
@@ -22,7 +22,7 @@ namespace Test_Abb.Models
 
         public TimeSpan Timestamp { get; set; }
 
-       
 
+        public Motor Motor { get; set; }
     }
 }

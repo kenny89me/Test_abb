@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Test_Abb.Models.CombustionMotor>
+﻿@model IEnumerable<Test_Abb.Models.Motor>
 
 @{
     ViewBag.Title = "Index";
@@ -11,12 +11,6 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FuelConsumption)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaxTorque)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.MotorName)
         </th>
@@ -31,12 +25,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FuelConsumption)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaxTorque)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.MotorName)
         </td>

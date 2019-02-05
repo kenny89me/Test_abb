@@ -20,6 +20,6 @@ namespace Test_Abb.Models
         [Display(Name = "Max torque at (rpm)")]
         public decimal MaxTorque { get; set; }
 
-        public virtual ICollection<CombustionMeasure> CombustionMeasures { get; set; }
+        public ICollection<CombustionMeasure> CombustionMeasures { get; set; }
     }
 }

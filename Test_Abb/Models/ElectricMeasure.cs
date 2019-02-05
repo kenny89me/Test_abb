@@ -18,7 +18,7 @@ namespace Test_Abb.Models
         [Display(Name = "Difference (A)")]
         public decimal? DifferenceA { get; set; }
 
-        public virtual ElectricMotor ElectricMotor { get; set; }
+        public ElectricMotor ElectricMotor { get; set; }
     }
     
 

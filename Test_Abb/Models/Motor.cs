@@ -30,7 +30,7 @@ namespace Test_Abb.Models
         [Display(Name = "Max Power (kW)")]
         public decimal MaxPower { get; set; }
 
-       
+        public ICollection<Measure> Measures { get; set; }
 
     }
 }

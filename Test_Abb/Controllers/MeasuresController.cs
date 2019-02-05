@@ -11,107 +11,121 @@ using Test_Abb.Models;
 
 namespace Test_Abb.Controllers
 {
-    public class CombustionMotorsController : Controller
+    public class MeasuresController : Controller
     {
         private TestContext db = new TestContext();
 
-        // GET: CombustionMotors
+        // GET: Measures
         public ActionResult Index()
         {
-            return View(db.CombustionMotors.ToList());
+            var c = db.ElectricMeasures;
+            var b = db.ElectricMotors;
+            foreach (var item in c)
+            {
+                foreach (var it in b)
+                {
+                    item.DifferenceA = it.CurrentA - item.ActualCurrentA;
+                }
+            }
+
+
+
+            db.SaveChanges();
+
+            return View(db.Measures.ToList());
         }
 
-        // GET: CombustionMotors/Details/5
+        // GET: Measures/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CombustionMotor combustionMotor = db.CombustionMotors.Find(id);
-            if (combustionMotor == null)
+            Measure measure = db.Measures.Find(id);
+            if (measure == null)
             {
                 return HttpNotFound();
             }
-            return View(combustionMotor);
+            return View(measure);
         }
 
-        // GET: CombustionMotors/Create
+        // GET: Measures/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: CombustionMotors/Create
+        // POST: Measures/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FuelConsumption,MaxTorque,MotorName,MotorType,MaxPower")] CombustionMotor combustionMotor)
+        public ActionResult Create([Bind(Include = "Id,MotorType,Timestamp")] Measure measure)
         {
             if (ModelState.IsValid)
             {
-                db.CombustionMotors.Add(combustionMotor);
+                db.Measures.Add(measure);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(combustionMotor);
+            return View(measure);
         }
 
-        // GET: CombustionMotors/Edit/5
+        // GET: Measures/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CombustionMotor combustionMotor = db.CombustionMotors.Find(id);
-            if (combustionMotor == null)
+            Measure measure = db.Measures.Find(id);
+            if (measure == null)
             {
                 return HttpNotFound();
             }
-            return View(combustionMotor);
+            return View(measure);
         }
 
-        // POST: CombustionMotors/Edit/5
+        // POST: Measures/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FuelConsumption,MaxTorque,MotorName,MotorType,MaxPower")] CombustionMotor combustionMotor)
+        public ActionResult Edit([Bind(Include = "Id,MotorType,Timestamp")] Measure measure)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(combustionMotor).State = EntityState.Modified;
+                db.Entry(measure).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(combustionMotor);
+            return View(measure);
         }
 
-        // GET: CombustionMotors/Delete/5
+        // GET: Measures/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CombustionMotor combustionMotor = db.CombustionMotors.Find(id);
-            if (combustionMotor == null)
+            Measure measure = db.Measures.Find(id);
+            if (measure == null)
             {
                 return HttpNotFound();
             }
-            return View(combustionMotor);
+            return View(measure);
         }
 
-        // POST: CombustionMotors/Delete/5
+        // POST: Measures/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CombustionMotor combustionMotor = db.CombustionMotors.Find(id);
-            db.CombustionMotors.Remove(combustionMotor);
+            Measure measure = db.Measures.Find(id);
+            db.Measures.Remove(measure);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

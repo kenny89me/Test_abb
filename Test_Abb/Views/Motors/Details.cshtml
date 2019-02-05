@@ -1,4 +1,4 @@
-﻿@model Test_Abb.Models.CombustionMeasure
+﻿@model Test_Abb.Models.Motor
 
 @{
     ViewBag.Title = "Details";
@@ -7,23 +7,15 @@
 <h2>Details</h2>
 
 <div>
-    <h4>CombustionMeasure</h4>
+    <h4>Motor</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ActualRevsRpm)
+            @Html.DisplayNameFor(model => model.MotorName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ActualRevsRpm)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DifferenceRpm)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DifferenceRpm)
+            @Html.DisplayFor(model => model.MotorName)
         </dd>
 
         <dt>
@@ -35,11 +27,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Timestamp)
+            @Html.DisplayNameFor(model => model.MaxPower)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Timestamp)
+            @Html.DisplayFor(model => model.MaxPower)
         </dd>
 
     </dl>

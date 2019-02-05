@@ -138,10 +138,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CombustionMeasuresController.cs" />
-    <Compile Include="Controllers\CombustionMotorsController.cs" />
-    <Compile Include="Controllers\ElectricMotorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MeasuresController.cs" />
+    <Compile Include="Controllers\MotorsController.cs" />
     <Compile Include="DAL\TestContext.cs" />
     <Compile Include="DAL\TestInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -196,21 +195,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\CombustionMeasures\Create.cshtml" />
-    <Content Include="Views\CombustionMeasures\Delete.cshtml" />
-    <Content Include="Views\CombustionMeasures\Details.cshtml" />
-    <Content Include="Views\CombustionMeasures\Edit.cshtml" />
-    <Content Include="Views\CombustionMeasures\Index.cshtml" />
-    <Content Include="Views\CombustionMotors\Create.cshtml" />
-    <Content Include="Views\CombustionMotors\Delete.cshtml" />
-    <Content Include="Views\CombustionMotors\Details.cshtml" />
-    <Content Include="Views\CombustionMotors\Edit.cshtml" />
-    <Content Include="Views\CombustionMotors\Index.cshtml" />
-    <Content Include="Views\ElectricMotors\Create.cshtml" />
-    <Content Include="Views\ElectricMotors\Delete.cshtml" />
-    <Content Include="Views\ElectricMotors\Details.cshtml" />
-    <Content Include="Views\ElectricMotors\Edit.cshtml" />
-    <Content Include="Views\ElectricMotors\Index.cshtml" />
+    <Content Include="Views\Motors\Create.cshtml" />
+    <Content Include="Views\Motors\Delete.cshtml" />
+    <Content Include="Views\Motors\Details.cshtml" />
+    <Content Include="Views\Motors\Edit.cshtml" />
+    <Content Include="Views\Motors\Index.cshtml" />
+    <Content Include="Views\Measures\Create.cshtml" />
+    <Content Include="Views\Measures\Delete.cshtml" />
+    <Content Include="Views\Measures\Details.cshtml" />
+    <Content Include="Views\Measures\Edit.cshtml" />
+    <Content Include="Views\Measures\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

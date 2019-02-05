@@ -20,6 +20,6 @@ namespace Test_Abb.Models
         [Display(Name = "Displacement (cm3/rev)")]
         public decimal Displacement { get; set; }
 
-        public virtual ICollection<HydraulicMeasure> HydraulicMeasures { get; set; }
+        public ICollection<HydraulicMeasure> HydraulicMeasures { get; set; }
     }
 }
