@@ -1,0 +1,58 @@
+﻿@model Test_Abb.Models.CombustionMotor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CombustionMotor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelConsumption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelConsumption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxTorque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxTorque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxPower)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

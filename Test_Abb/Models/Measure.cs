@@ -9,9 +9,10 @@ namespace Test_Abb.Models
 {
     public abstract class Measure
     {
-        public int MeasureId { get; set; }
+        
+        public int Id { get; set; }
 
-        public int MotorId { get; set; }
+        public MotorType? MotorType { get; set; }
 
         [Required]
         [DataType(DataType.DateTime)]

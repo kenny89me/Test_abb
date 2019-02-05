@@ -11,12 +11,10 @@ namespace Test_Abb.Models
     {
 
         [Required]
-        [DataType(DataType.Currency)]
         [Display(Name = "Actual current (A)")]
         public decimal ActualCurrentA { get; set; }
 
         [Required]
-        [DataType(DataType.Currency)]
         [Display(Name = "Difference (A)")]
         public decimal? DifferenceA { get; set; }
 

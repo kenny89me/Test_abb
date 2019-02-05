@@ -14,12 +14,10 @@ namespace Test_Abb.DAL
         {
         }
 
-        public DbSet<Motor> Motors { get; set; }
         public DbSet<ElectricMotor> ElectricMotors { get; set; }
         public DbSet<CombustionMotor> CombustionMotors { get; set; }
         public DbSet<HydraulicMotor> HydraulicMotors { get; set; }
 
-        public DbSet<Measure> Measures { get; set; }
         public DbSet<ElectricMeasure> ElectricMeasures { get; set; }
         public DbSet<CombustionMeasure> CombustionMeasures { get; set; }
         public DbSet<HydraulicMeasure> HydraulicMeasures { get; set; }

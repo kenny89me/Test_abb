@@ -11,12 +11,12 @@ namespace Test_Abb.Models
     {
 
         [Required]
-        [DataType(DataType.Currency)]
+        
         [Display(Name = "Max presure (bar)")]
         public decimal MaxPresure { get; set; }
 
         [Required]
-        [DataType(DataType.Currency)]
+        
         [Display(Name = "Displacement (cm3/rev)")]
         public decimal Displacement { get; set; }
 

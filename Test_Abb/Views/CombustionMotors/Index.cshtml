@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Test_Abb.Models.CombustionMotor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FuelConsumption)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxTorque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotorType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxPower)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FuelConsumption)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxTorque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotorType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxPower)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

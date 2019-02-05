@@ -11,12 +11,12 @@ namespace Test_Abb.Models
     {
 
         [Required]
-        [DataType(DataType.Currency)]
+       
         [Display(Name = "Voltage (V)")]
         public decimal VoltageV { get; set; }
 
         [Required]
-        [DataType(DataType.Currency)]
+        
         [Display(Name = "Current (A)")]
         public decimal CurrentA { get; set; }
 

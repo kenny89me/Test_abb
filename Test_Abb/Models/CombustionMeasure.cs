@@ -11,12 +11,10 @@ namespace Test_Abb.Models
     {
 
         [Required]
-        [DataType(DataType.Currency)]
         [Display(Name = "Actual revs. (rpm)")]
         public decimal ActualRevsRpm { get; set; }
 
         [Required]
-        [DataType(DataType.Currency)]
         [Display(Name = "Difference (rpm)")]
         public decimal? DifferenceRpm { get; set; }
 

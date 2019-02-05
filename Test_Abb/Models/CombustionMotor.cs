@@ -11,12 +11,12 @@ namespace Test_Abb.Models
     {
 
         [Required]
-        [DataType(DataType.Currency)]
+        
         [Display(Name = "Fuel consumtion per hour(l/h)")]
         public decimal FuelConsumption { get; set; }
 
         [Required]
-        [DataType(DataType.Currency)]
+        
         [Display(Name = "Max torque at (rpm)")]
         public decimal MaxTorque { get; set; }
 

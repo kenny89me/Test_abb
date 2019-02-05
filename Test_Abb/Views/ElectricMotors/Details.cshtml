@@ -1,0 +1,58 @@
+﻿@model Test_Abb.Models.ElectricMotor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ElectricMotor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VoltageV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoltageV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotorType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotorType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxPower)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

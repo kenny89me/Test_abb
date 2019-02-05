@@ -11,15 +11,13 @@ namespace Test_Abb.Models
     {
 
         [Required]
-        [DataType(DataType.Currency)]
         [Display(Name = "Actual pressure (bar)")]
         public decimal ActualPresureBar { get; set; }
 
         [Required]
-        [DataType(DataType.Currency)]
         [Display(Name = "Difference (bar)")]
         public decimal? DifferenceBar { get; set; }
 
-        public virtual HydraulicMotor GetHydraulicMotor { get; set; }
+        public virtual HydraulicMotor HydraulicMotor { get; set; }
     }
 }

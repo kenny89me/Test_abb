@@ -138,6 +138,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CombustionMeasuresController.cs" />
+    <Compile Include="Controllers\CombustionMotorsController.cs" />
+    <Compile Include="Controllers\ElectricMotorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\TestContext.cs" />
     <Compile Include="DAL\TestInitializer.cs" />
@@ -177,7 +180,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -191,6 +196,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\CombustionMeasures\Create.cshtml" />
+    <Content Include="Views\CombustionMeasures\Delete.cshtml" />
+    <Content Include="Views\CombustionMeasures\Details.cshtml" />
+    <Content Include="Views\CombustionMeasures\Edit.cshtml" />
+    <Content Include="Views\CombustionMeasures\Index.cshtml" />
+    <Content Include="Views\CombustionMotors\Create.cshtml" />
+    <Content Include="Views\CombustionMotors\Delete.cshtml" />
+    <Content Include="Views\CombustionMotors\Details.cshtml" />
+    <Content Include="Views\CombustionMotors\Edit.cshtml" />
+    <Content Include="Views\CombustionMotors\Index.cshtml" />
+    <Content Include="Views\ElectricMotors\Create.cshtml" />
+    <Content Include="Views\ElectricMotors\Delete.cshtml" />
+    <Content Include="Views\ElectricMotors\Details.cshtml" />
+    <Content Include="Views\ElectricMotors\Edit.cshtml" />
+    <Content Include="Views\ElectricMotors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
