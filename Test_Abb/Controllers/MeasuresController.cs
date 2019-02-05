@@ -18,16 +18,10 @@ namespace Test_Abb.Controllers
         // GET: Measures
         public ActionResult Index()
         {
-            var c = db.ElectricMeasures;
-            var b = db.ElectricMotors;
-            foreach (var item in c)
-            {
-                foreach (var it in b)
-                {
-                    item.DifferenceA = it.CurrentA - item.ActualCurrentA;
-                }
-            }
 
+            /*var elMotor = db.ElectricMotors.Include(c => c.db.ElectricMeasure);
+            return View(elMotor.ToList());*/
+            
 
 
             db.SaveChanges();

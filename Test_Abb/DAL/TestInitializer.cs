@@ -66,13 +66,13 @@ namespace Test_Abb.DAL
 
             var hydraulicMeasures = new List<HydraulicMeasure>
             {
-            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").Id, Timestamp = new TimeSpan(10, 00, 00), ActualPresureBar = 155m, DifferenceBar = 0m  },
-            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").Id, Timestamp = new TimeSpan(10, 10, 00), ActualPresureBar = 158m, DifferenceBar = 0m},
-            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").Id, Timestamp = new TimeSpan(10, 20, 00), ActualPresureBar = 140, DifferenceBar = 0m},
-            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").Id, Timestamp = new TimeSpan(10, 30, 00), ActualPresureBar = 145m, DifferenceBar = 0m},
-            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").Id, Timestamp = new TimeSpan(10, 40, 00), ActualPresureBar = 159m, DifferenceBar = 0m},
-            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").Id, Timestamp = new TimeSpan(10, 50, 00), ActualPresureBar = 160m, DifferenceBar = 0m},
-            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").Id, Timestamp = new TimeSpan(11, 00, 00), ActualPresureBar = 139m, DifferenceBar = 0m}
+            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").MotorId, Timestamp = new TimeSpan(10, 00, 00), ActualPresureBar = 155m, DifferenceBar = 0m  },
+            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").MotorId, Timestamp = new TimeSpan(10, 10, 00), ActualPresureBar = 158m, DifferenceBar = 0m},
+            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").MotorId, Timestamp = new TimeSpan(10, 20, 00), ActualPresureBar = 140, DifferenceBar = 0m},
+            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").MotorId, Timestamp = new TimeSpan(10, 30, 00), ActualPresureBar = 145m, DifferenceBar = 0m},
+            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").MotorId, Timestamp = new TimeSpan(10, 40, 00), ActualPresureBar = 159m, DifferenceBar = 0m},
+            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").MotorId, Timestamp = new TimeSpan(10, 50, 00), ActualPresureBar = 160m, DifferenceBar = 0m},
+            new HydraulicMeasure { MotorId = hydraulicMotors.Single(h => h.MotorName == "Motor3").MotorId, Timestamp = new TimeSpan(11, 00, 00), ActualPresureBar = 139m, DifferenceBar = 0m}
             };
             //StudentID = students.Single(s => s.LastName == "Alonso").ID;
 

@@ -11,7 +11,7 @@ namespace Test_Abb.Models
     {
         [Key]
         public int MeasureId { get; set; }
-
+        
         public int MotorId { get; set; }
 
         [Required]
@@ -23,6 +23,6 @@ namespace Test_Abb.Models
         public TimeSpan Timestamp { get; set; }
 
 
-        public Motor Motor { get; set; }
+        public virtual Motor Motor { get; set; }
     }
 }

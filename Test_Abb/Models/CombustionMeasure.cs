@@ -18,6 +18,6 @@ namespace Test_Abb.Models
         [Display(Name = "Difference (rpm)")]
         public decimal? DifferenceRpm { get; set; }
 
-        public CombustionMotor CombustionMotor { get; set; }
+        public virtual CombustionMotor CombustionMotor { get; set; }
     }
 }

@@ -18,6 +18,6 @@ namespace Test_Abb.Models
         [Display(Name = "Difference (bar)")]
         public decimal? DifferenceBar { get; set; }
 
-        public HydraulicMotor HydraulicMotor { get; set; }
+        public virtual HydraulicMotor HydraulicMotor { get; set; }
     }
 }

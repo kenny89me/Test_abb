@@ -16,8 +16,8 @@ namespace Test_Abb.Models
     public abstract class Motor
     {
         
-        
-        public int Id { get; set; }
+        [Key]
+        public int MotorId { get; set; }
 
         [Required]
         [StringLength(60)]
