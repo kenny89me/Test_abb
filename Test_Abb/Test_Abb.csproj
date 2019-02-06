@@ -139,8 +139,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MeasuresController.cs" />
-    <Compile Include="Controllers\MotorsController.cs" />
     <Compile Include="DAL\TestContext.cs" />
     <Compile Include="DAL\TestInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -200,17 +198,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Motors\Create.cshtml" />
-    <Content Include="Views\Motors\Delete.cshtml" />
-    <Content Include="Views\Motors\Details.cshtml" />
-    <Content Include="Views\Motors\Edit.cshtml" />
-    <Content Include="Views\Motors\Index.cshtml" />
-    <Content Include="Views\Measures\Create.cshtml" />
-    <Content Include="Views\Measures\Delete.cshtml" />
-    <Content Include="Views\Measures\Details.cshtml" />
-    <Content Include="Views\Measures\Edit.cshtml" />
-    <Content Include="Views\Measures\Index.cshtml" />
-    <Content Include="Views\Measures\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
