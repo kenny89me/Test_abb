@@ -15,7 +15,6 @@ namespace Test_Abb.Models
 
     public abstract class Motor
     {
-        
         [Key]
         public int MotorId { get; set; }
 

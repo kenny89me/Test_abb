@@ -18,7 +18,21 @@ namespace Test_Abb.Controllers
         // GET: Motors
         public ActionResult Index()
         {
-            return View(db.Motors.ToList());
+
+            var electricMotors = db.ElectricMotors.Include(c => c.ElectricMeasures).ToList();
+            foreach (ElectricMotor e in electricMotors)
+            {
+                /*foreach (ElectricMeasure em in e.ElectricMeasures)
+                {
+                    em.DifferenceA = e.VoltageV - em.ActualCurrentA;
+                }*/
+            }
+
+            db.SaveChanges();
+
+            return View(electricMotors.ToList()); 
+
+            //return View(db.Motors.ToList());
         }
 
         // GET: Motors/Details/5

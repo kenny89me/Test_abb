@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Test_Abb.Models.Motor>
-
+﻿@model IEnumerable<Test_Abb.Models.ElectricMotor>
+@using Test_Abb.Models;
 @{
     ViewBag.Title = "Index";
 }
@@ -23,7 +23,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.MotorName)
@@ -35,11 +36,15 @@
             @Html.DisplayFor(modelItem => item.MaxPower)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MotorId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MotorId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MotorId })
+            @Html.DisplayFor(modelItem => ((ElectricMotor)item).ElectricMeasures.Count)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MotorId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MotorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MotorId })
         </td>
     </tr>
-}
+    }
 
 </table>

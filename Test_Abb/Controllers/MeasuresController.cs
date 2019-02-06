@@ -19,14 +19,38 @@ namespace Test_Abb.Controllers
         public ActionResult Index()
         {
 
-            /*var elMotor = db.ElectricMotors.Include(c => c.db.ElectricMeasure);
-            return View(elMotor.ToList());*/
-            
+            var electricMeasures = db.ElectricMeasures.Include(c => c.ElectricMotor).ToList();
 
+            foreach (var i in electricMeasures)
+            {
 
+                i.DifferenceA = /*i.ElectricMotor.CurrentA*/ -i.ActualCurrentA;
+            }
             db.SaveChanges();
 
-            return View(db.Measures.ToList());
+            //List<ElectricMotor> CurrA = new List<ElectricMotor>();
+
+            /*foreach (ElectricMeasure em in electricMeasures)
+            {
+                decimal a = em.ElectricMotor.CurrentA;
+                //db.Entry(em).Collection(x => x.ElectricMotor).Load();
+                em.DifferenceA = a - em.ActualCurrentA;
+
+                /*foreach (ElectricMotor e in em.Motor)
+                {
+                    em.DifferenceA = (decimal)e.CurrentA - em.ActualCurrentA;
+
+                }
+                
+            }*/
+            //db.SaveChanges();
+            return View(db.ElectricMeasures.ToList());
+
+
+
+
+
+
         }
 
         // GET: Measures/Details/5

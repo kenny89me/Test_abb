@@ -24,5 +24,7 @@ namespace Test_Abb.Models
 
 
         public virtual Motor Motor { get; set; }
+
+
     }
 }
